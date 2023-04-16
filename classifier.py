@@ -50,12 +50,12 @@ for i in range(80):
   img.save(newImgPath)
 
 # display resized  image
-img = mpimg.imread('/content/image resized/00ab26d4-71a6-4185-970f-e03166ad10ae.jpeg')
+img = mpimg.imread('/content/image reshaped/00ab26d4-71a6-4185-970f-e03166ad10ae.jpeg')
 imgplt = plt.imshow(img)
 plt.show()
 
 # creaing a for loop to assign labels
-filenames = os.listdir('/content/image resized/')
+filenames = os.listdir('/content/image reshaped/')
 
 
 labels = []
@@ -83,7 +83,7 @@ print(counts)
 
 import cv2
 import glob
-image_directory = '/content/image resized/'
+image_directory = '/content/image reshaped/'
 image_extension = ['png', 'jpeg']
 
 files = []
@@ -137,10 +137,10 @@ input_pred_label = np.argmax(input_prediction)
 print(input_pred_label)
 
 if input_pred_label == 0:
-  print('The image represents a Celosa')
+  print('The image is celosa')
 else:
   if input_pred_label == 1:
-    print('The image represents a Chloris')
+    print('The image is Chloris')
   else:
-    print('The given pic is of Crowfoot ')
+    print('The image is  Crowfoot ')
 
